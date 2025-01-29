@@ -1,1 +1,1 @@
-A short course on functional programming and its core concepts using Python on boot.dev.
+A short course on functional programming and its core concepts using Python on boot.dev
