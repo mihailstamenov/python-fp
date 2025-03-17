@@ -19,4 +19,5 @@ def find_keywords(document):
         "memoization",
         "referential transparency",
     ]
-    return list(filter(lambda keyword: keyword in document, keywords))
+    lowered_doc = document.lower()
+    return list(filter(lambda keyword: keyword in lowered_doc, keywords))
