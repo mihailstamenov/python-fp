@@ -1,7 +1,10 @@
 def count_nested_levels(nested_documents, target_document_id, level=1):
-    for id in nested_documents:
-        if id == target_document_id:
+    for document_id in nested_documents:
+        if document_id == target_document_id:
             return level
-        res = count_nested_levels(nested_documents[id], target_document_id, level+1)
-        if res != 1: return res
+        found_level = count_nested_levels(
+            nested_documents[document_id], target_document_id, level + 1
+        )
+        if found_level != -1:
+            return found_level
     return -1
